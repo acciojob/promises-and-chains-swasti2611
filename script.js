@@ -10,24 +10,20 @@ btn.addEventListener('click',(event)=>{
 
 if(age>18){
     setTimeout(()=>{
-       
-       
-        resolve(
+       resolve(
             alert(`welcome , ${Name}, You can vote`)
         )  
-       
-       
-    
-},4000)
+    },4000)
    
-    console.log(Promise);
+    
 }else{
-    
-        reject(alert(`Oh sorry ${Name}. You aren't old enough.`));
-    
-}
+    setTimeout(()=>{
+       reject(alert(`Oh sorry ${Name}. You aren't old enough.`));
+    },4000)
+        
+    }
 
-    })
+ })
     
 
 })
