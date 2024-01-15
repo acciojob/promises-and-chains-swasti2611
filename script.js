@@ -1,23 +1,36 @@
-//your JS code here. If required.
-let btn=document.getElementById("btn");
+let btn=document.querySelector("#btn");
 
 
-btn.addEventListner("click",()=>{
-	let age=document.getElementById( "age").value;
-    let name=document.getElementById( "name").value;
 
+btn.addEventListener('click',(event)=>{
+    let age =document.querySelector("#age").value
+    let Name=document.querySelector("#name").value;
 
-	return new Promise((resolve,reject)=>{
-		setTimeout(()=>{
-			if(age>18){
-			alert(`Welcome, ${name}. You can vote.`)
-			}
-			else{
-				alert(`Oh sorry ${name}. You aren't old enough.`)
-			}
-		},4000)
-	})
-});
+if(age ==" " && Name==" "){
+    alert(`fill proper`);
+}
+    return new Promise((resolve,reject)=>{
+
+if(age>18){
+    setTimeout(()=>{
+       
+        resolve(
+            
+            alert(`welcome , ${Name}, You can vote`)
+           
+        )
+    },4000)
+    console.log(Promise);
+}else{
+    
+        reject(alert(`Oh sorry ${Name}. You aren't old enough.`));
+    
+}
+
+    })
+    
+
+})
 
 
 	
